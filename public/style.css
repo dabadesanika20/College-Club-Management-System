@@ -1,0 +1,121 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6fb;
+    color: #263238;
+}
+
+header {
+    background: #243b70;
+    color: white;
+    text-align: center;
+    padding: 28px 15px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+}
+
+nav {
+    background: #18294d;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+button {
+    background: #3478db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+nav button {
+    background: transparent;
+}
+
+button:hover {
+    background: #205bb0;
+}
+
+main {
+    max-width: 1100px;
+    margin: 25px auto;
+    padding: 0 18px;
+}
+
+.section {
+    background: white;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px #0000000d;
+}
+
+.hidden {
+    display: none;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 18px;
+}
+
+.card {
+    background: #eaf1ff;
+    border-left: 5px solid #3478db;
+    padding: 18px;
+    border-radius: 7px;
+}
+
+.card p {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px 0 0;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin: 20px 0;
+}
+
+input {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccd3df;
+    border-radius: 5px;
+}
+
+.record {
+    border: 1px solid #e1e5ed;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+    overflow-wrap: anywhere;
+}
+
+.delete-btn {
+    background: #d94343;
+    margin-left: 10px;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    main {
+        padding: 0 10px;
+    }
+}

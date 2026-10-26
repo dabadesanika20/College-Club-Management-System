@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Club Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>College Club Management</h1>
+        <p>Manage your college clubs, students and events</p>
+    </header>
+
+    <nav>
+        <button onclick="showSection('dashboard')">Dashboard</button>
+        <button onclick="showSection('students')">Students</button>
+        <button onclick="showSection('clubs')">Clubs</button>
+        <button onclick="showSection('events')">Events</button>
+        <button onclick="showSection('memberships')">Memberships</button>
+    </nav>
+
+    <main>
+        <section id="dashboard" class="section">
+            <h2>Dashboard</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Students</h3>
+                    <p id="studentCount">0</p>
+                </div>
+                <div class="card">
+                    <h3>Clubs</h3>
+                    <p id="clubCount">0</p>
+                </div>
+                <div class="card">
+                    <h3>Events</h3>
+                    <p id="eventCount">0</p>
+                </div>
+                <div class="card">
+                    <h3>Memberships</h3>
+                    <p id="membershipCount">0</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="students" class="section hidden">
+            <h2>Student Management</h2>
+            <form id="studentForm">
+                <input name="name" placeholder="Student name" required>
+                <input name="email" type="email" placeholder="Email" required>
+                <input name="phone" placeholder="Phone number">
+                <input name="department" placeholder="Department">
+                <input name="year" type="number" min="1" max="6" placeholder="Year">
+                <button type="submit">Add Student</button>
+            </form>
+            <div id="studentList"></div>
+        </section>
+
+        <section id="clubs" class="section hidden">
+            <h2>Club Management</h2>
+            <form id="clubForm">
+                <input name="name" placeholder="Club name" required>
+                <input name="description" placeholder="Description">
+                <input name="coordinator" placeholder="Coordinator">
+                <button type="submit">Add Club</button>
+            </form>
+            <div id="clubList"></div>
+        </section>
+
+        <section id="events" class="section hidden">
+            <h2>Event Management</h2>
+            <form id="eventForm">
+                <input name="name" placeholder="Event name" required>
+                <input name="clubId" placeholder="Club ID (optional)">
+                <input name="date" type="date" required>
+                <input name="venue" placeholder="Venue">
+                <button type="submit">Add Event</button>
+            </form>
+            <div id="eventList"></div>
+        </section>
+
+        <section id="memberships" class="section hidden">
+            <h2>Membership Management</h2>
+            <form id="membershipForm">
+                <input name="studentId" placeholder="Student ID" required>
+                <input name="clubId" placeholder="Club ID" required>
+                <button type="submit">Register Membership</button>
+            </form>
+            <div id="membershipList"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
